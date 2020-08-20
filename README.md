@@ -2,7 +2,7 @@
 ### **Scikit-image Workshop y Taller 3**
 #### **Ejecución sobre Google Colab**
 - Abra el Notebook que desea ejecutar, ya sea desde su PC o en [GitHub](https://github.com/jpcano1/ISIS_4825_taller_3.git)
-- Haga click donde dice **Run in Colab**
+- Haga click donde dice **Run in Google Colab**
 - Click en **File >> Save a copy in Drive...** para salvar su progreso en drive
 - Ejecute el siguiente código sobre la primera celda del notebook
 ```python
