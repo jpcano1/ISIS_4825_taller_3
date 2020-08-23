@@ -7,7 +7,7 @@
 - Ejecute el siguiente código sobre la primera celda del notebook
 ```python
 !shred -u setup_colab.py
-!wget https://raw.githubusercontent.com/jpcano1/ISIS_4825_taller_3/master/setup_colab.py
+!wget https://raw.githubusercontent.com/jpcano1/ISIS_4825_taller_3/master/setup_colab.py -O setup_colab.py
 import setup_colab as setup
 setup.setup_workshop()
 ```
