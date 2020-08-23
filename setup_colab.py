@@ -14,5 +14,9 @@ def download_github_content(path):
     os.system(f"wget https://raw.githubusercontent.com/jpcano1/ISIS_4825_taller_3/master/{path} -O {path}")
 
 def setup_workshop():
-    download_github_content("utils/color_segmentation.py")
-    download_github_content("utils/visualization.py")
+    try:
+        download_github_content("utils/color_segmentation.py")
+        download_github_content("utils/visualization.py")
+        print("Workshop enabled successfully!")
+    except Exception as e:
+        raise e
