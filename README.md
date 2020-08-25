@@ -1,5 +1,5 @@
 ## **ISIS 4825 - Imágenes y Visión**
-### **Scikit-image Workshop y Taller 3**
+### **Taller 3**
 #### **Ejecución sobre Google Colab**
 - Abra el Notebook que desea ejecutar, ya sea desde su PC o en [GitHub](https://github.com/jpcano1/ISIS_4825_taller_3.git)
 - Haga click donde dice **Run in Google Colab**
