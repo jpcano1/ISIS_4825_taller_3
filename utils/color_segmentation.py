@@ -53,8 +53,11 @@ def segmentation_demo(img, n_colors=(10, 8, 6, 4, 2), gray=False):
     # We rescale the image in order to have values between 0 and 1
     if gray:
         plt.gray()
+
+        # We convert the image to grayscale
         orig_img = color.rgb2gray(img)
 
+        # We reshape the image to have just a simple array of grayscale points
         X = orig_img.reshape(-1, 1)
 
     else:
@@ -65,8 +68,10 @@ def segmentation_demo(img, n_colors=(10, 8, 6, 4, 2), gray=False):
         orig_img = img.copy()
         X = orig_img.reshape(-1, 4) if orig_img.shape[-1] == 4 else orig_img.reshape(-1, 3)
 
+    # Take the shape of the image to be segmented
     shape_ = orig_img.shape
 
+    # An empty array of the segmented images
     segmented_imgs = []
 
     # Let's begin the segmentation
@@ -86,34 +91,6 @@ def segmentation_demo(img, n_colors=(10, 8, 6, 4, 2), gray=False):
     # and start to plot
     plt.subplot(231)
     plt.imshow(orig_img)
-    plt.title("Imagen Original")
-    plt.axis("off")
-
-    for idx, n_clusters in enumerate(n_colors):
-        plt.subplot(2, 3, 2 + idx)
-        plt.imshow(segmented_imgs[idx])
-        plt.title(f"{n_clusters} Colores")
-        plt.axis("off")
-
-    plt.show()
-    return segmented_imgs
-
-def segmentation_grayscale(img, n_colors=(10, 8, 6, 4, 2)):
-    plt.gray()
-    img_gray = color.rgb2gray(img)
-    X = img_gray.reshape(-1, 1)
-
-    segmented_imgs = []
-
-    for n_clusters in n_colors:
-        kmeans = KMeans(n_clusters=n_clusters, random_state=1234).fit(X)
-        segmented_img = kmeans.cluster_centers_[kmeans.labels_]
-        segmented_imgs.append(segmented_img.reshape(img_gray.shape))
-
-    plt.figure(figsize=(10, 5))
-
-    plt.subplot(231)
-    plt.imshow(img_gray)
     plt.title("Imagen Original")
     plt.axis("off")
 
