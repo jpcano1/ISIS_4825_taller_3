@@ -53,19 +53,20 @@ def segmentation_demo(img, n_colors=(10, 8, 6, 4, 2), gray=False):
     # We rescale the image in order to have values between 0 and 1
     if gray:
         plt.gray()
-        img_gray = color.rgb2gray(img)
+        orig_img = color.rgb2gray(img)
 
-        X = img_gray.reshape(-1, 1)
-        shape_ = img_gray.shape
+        X = orig_img.reshape(-1, 1)
 
     else:
         if img.max() == 255:
             img = img / 255
 
         # We reshape the image to have just a simple array of channels
-        X = img.reshape(-1, 4) if img.shape[-1] == 4 else img.reshape(-1, 3)
-        shape_ = img.shape
-    
+        orig_img = img.copy()
+        X = orig_img.reshape(-1, 4) if orig_img.shape[-1] == 4 else orig_img.reshape(-1, 3)
+
+    shape_ = orig_img.shape
+
     segmented_imgs = []
 
     # Let's begin the segmentation
@@ -84,7 +85,7 @@ def segmentation_demo(img, n_colors=(10, 8, 6, 4, 2), gray=False):
     # Create the subplots for each segmented image
     # and start to plot
     plt.subplot(231)
-    plt.imshow(img)
+    plt.imshow(orig_img)
     plt.title("Imagen Original")
     plt.axis("off")
 
