@@ -18,7 +18,7 @@ from sklearn.cluster import KMeans
 # url = "https://i.blogs.es/e56933/colibri/450_1000.jpg"
 # Flor
 # url = "https://s1.significados.com/foto/photo-credit-dora-alis-on-visualhunt_bg.png"
-# Brain Turmo MRI
+# Brain Tumor MRI
 # url = "https://docs.google.com/uc?export=download&id=1FDuWDGlTfUkLfi3dpApHPKlTlMlMtHYV"
 
 def download_image(url, filename="image.jpg"):
