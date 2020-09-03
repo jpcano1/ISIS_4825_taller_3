@@ -1,3 +1,4 @@
+![image](https://docs.google.com/uc?export=download&id=15DUc09hFGqR8qcpYiN1OajRNaASmiL6d)
 ## **ISIS 4825 - Imágenes y Visión**
 ### **Taller 3**
 #### **Ejecución sobre Google Colab**
@@ -13,4 +14,5 @@ setup.setup_workshop()
 ```
 
 #### **Ejecución Local**
-- Diríjase al siguiente [link](https://janakiev.com/blog/jupyter-virtual-envs/) desde su PC para ver el tutorial
+- Diríjase al siguiente [link](https://youtu.be/fiHnZA_IUoY) desde su PC para ver el tutorial de instalación en Windows
+- Diríjase al siguiente [link](https://youtu.be/Kz8xeY9TN-c) para ver el tutorial de instalación en Linux.
