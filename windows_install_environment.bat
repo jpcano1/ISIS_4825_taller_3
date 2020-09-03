@@ -14,7 +14,7 @@ if "%ENV%"=="" (
     python -m ipykernel install --user --name="%ENV%"
     jupyter notebook
     echo y | jupyter kernelspec uninstall "%ENV%"
-    "%ENV%%/Scripts/deactivate"
+    "%ENV%/Scripts/deactivate"
 )
 
 PAUSE
