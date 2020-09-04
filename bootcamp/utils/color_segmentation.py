@@ -68,7 +68,7 @@ def segmentation_demo(img, n_colors=(10, 8, 6, 4, 2), gray=False):
 
         # We reshape the image to have just a simple array of channels
         orig_img = img.copy()
-        X = orig_img.reshape(-1, 4) if orig_img.shape[-1] == 4 else orig_img.reshape(-1, 3)
+        X = orig_img.reshape(-1, orig_img.shape[-1])
 
     # Take the shape of the image to be segmented
     shape_ = orig_img.shape
