@@ -1,7 +1,7 @@
 @echo off
 
 if "%ENV%"=="" (
-    echo Variable ENV no definida, por favor crearla
+    set ENV=venv
 ) else (
     :: Vamos a activar el entorno virtual de anaconda
     :: Si la siguiente no es la ruta de su instalación
