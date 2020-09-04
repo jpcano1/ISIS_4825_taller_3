@@ -1,8 +1,13 @@
 @echo off
 
 if "%ENV%"=="" (
-    echo Variable no definida
+    echo Variable ENV no definida, por favor crearla
 ) else (
+    :: Vamos a activar el entorno virtual de anaconda
+    :: Si la siguiente no es la ruta de su instalación
+    :: Por favor cambiarla
+    "%HOMEPATH%/anaconda3/Scripts/activate"
+    
     if not exist "%cd%/%ENV%" (
         pip install virtualenv
         virtualenv "%ENV%"
@@ -15,6 +20,7 @@ if "%ENV%"=="" (
     jupyter notebook
     echo y | jupyter kernelspec uninstall "%ENV%"
     "%ENV%/Scripts/deactivate"
+    conda deactivate
 )
 
 PAUSE

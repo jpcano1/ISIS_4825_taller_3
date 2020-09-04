@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ -z "$ENV" ]; then
-  echo "No Existe, por favor crea esta variable"
+  echo "No Existe ENV, por favor crear esta variable"
 else
   if [ ! -d "$ENV" ]
   then
