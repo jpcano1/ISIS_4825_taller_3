@@ -14,5 +14,5 @@ setup.setup_workshop()
 ```
 
 #### **Ejecución Local**
-- Diríjase al siguiente [link](https://youtu.be/fiHnZA_IUoY) desde su PC para ver el tutorial de instalación en Windows
+- Diríjase al siguiente [link](https://youtu.be/VwsWVfRjLYE) desde su PC para ver el tutorial de instalación en Windows
 - Diríjase al siguiente [link](https://youtu.be/Kz8xeY9TN-c) para ver el tutorial de instalación en Linux.
